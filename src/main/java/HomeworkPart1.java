@@ -1,5 +1,3 @@
-import javax.sound.midi.Soundbank;
-import java.sql.SQLOutput;
 import java.util.Scanner;
 
 public class HomeworkPart1 {
@@ -70,14 +68,33 @@ public class HomeworkPart1 {
     }
 
 
+    public void calculate(String number) {
+
+        int sum = Integer.parseInt(number) + 5;
+        double value =  Integer.parseInt(number) - 12.3;
+        double multiplication = sum * (-3.2);
+        int divide = sum/4;
+        int modulo = sum % 2;
+        int modulo1 = Integer.parseInt(number) % 2;
+        System.out.println("sum: " + sum + "; " + " value: " + value + "; " + "multiplication: " + multiplication + "; "
+                + "divide: " + divide + "; " + "modulo: " + modulo + "; " + "modula1: " + modulo1);
+    }
 
 
 
+    public void checkMethod() {
+        int x = 2;
 
+        int y = 12;
+        // y = x * y;
+        y = x + y;
 
+        x = y - x;
+        y = y - x;
 
-
-
+        System.out.println(x);
+        System.out.println(y);
+    }
 
 
     public static void main(String[] args) {
@@ -92,6 +109,8 @@ public class HomeworkPart1 {
         int x = value.nextInt();
         String keyboardValue = value.nextLine();
         System.out.println(part1.checkVariablesKeyboard(x, keyboardValue));
+        part1.calculate(value.nextLine());
+        part1.checkMethod();
 
 
 
