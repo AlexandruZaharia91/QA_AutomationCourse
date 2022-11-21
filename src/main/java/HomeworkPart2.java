@@ -74,13 +74,13 @@ public class HomeworkPart2 {
 //----------------------------------------------------------------------------------------------------------------------------------------------------
 
 
-          List<Integer> elementsOfList = new ArrayList<>();
-          for(int j = 0;j<5;j++) {
+        List<Integer> elementsOfList = new ArrayList<>();
+        for(int j = 0;j<5;j++) {
               elementsOfList.add(j);
-          }
-          part2.listOfElements(elementsOfList);
+        }
+        part2.listOfElements(elementsOfList);
 
-          System.out.println("--------------------------finish ex 7 ----------------------\n\n");
+        System.out.println("--------------------------finish ex 7 ----------------------\n\n");
 //-------------------------------------------------------------------------------------------------------------------------------------------------------
     }
 
