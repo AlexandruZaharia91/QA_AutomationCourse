@@ -1,7 +1,7 @@
 import java.util.Scanner;
 
 public class HomeworkPart1 {
-    int x,y,z = 10;
+ //   int x,y,z = 10;
     int year = 24;
     String sentence = "I like Java";
 
@@ -97,22 +97,22 @@ public class HomeworkPart1 {
     }
 
 
-    public static void main(String[] args) {
-        HomeworkPart1 part1 = new HomeworkPart1();
-        part1.displaySentence();
-        displaySentences();
-        part1.age();
-        part1.readAndDisplay();
-        //part1.age
-        part1.myVariables();
-        Scanner value = new Scanner(System.in);
-        int x = value.nextInt();
-        String keyboardValue = value.nextLine();
-        System.out.println(part1.checkVariablesKeyboard(x, keyboardValue));
-        part1.calculate(value.nextLine());
-        part1.checkMethod();
-
-
-
-    }
+//    public static void main(String[] args) {
+//        HomeworkPart1 part1 = new HomeworkPart1();
+//        part1.displaySentence();
+//        displaySentences();
+//        part1.age();
+//        part1.readAndDisplay();
+//        //part1.age
+//        part1.myVariables();
+//        Scanner value = new Scanner(System.in);
+//        int x = value.nextInt();
+//        String keyboardValue = value.nextLine();
+//        System.out.println(part1.checkVariablesKeyboard(x, keyboardValue));
+//        part1.calculate(value.nextLine());
+//        part1.checkMethod();
+//
+//
+//
+//    }
 }
