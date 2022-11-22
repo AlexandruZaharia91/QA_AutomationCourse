@@ -3,6 +3,10 @@ package OptionalExercisesPart2;
 public class Lasagna {
     final int ovenLasagnaTime = 40;
 
+    public static void main(String[] args) {
+        Lasagna lasagna = new Lasagna();
+        System.out.println("total time in Minutes = " + lasagna.totalTimeInMinutes(3,20));
+    }
 
     public int expectedMinutesInOven() {
         return ovenLasagnaTime;
@@ -18,11 +22,5 @@ public class Lasagna {
 
     public int totalTimeInMinutes(int numberOfLayers, int numberOfMinutes) {
         return preparationTimeMinutes(numberOfLayers) + remainingMinutesInOven(numberOfMinutes);
-    }
-
-
-    public static void main(String[] args) {
-        Lasagna lasagna = new Lasagna();
-        System.out.println("total time in Minutes = " + lasagna.totalTimeInMinutes(3,20));
     }
 }
