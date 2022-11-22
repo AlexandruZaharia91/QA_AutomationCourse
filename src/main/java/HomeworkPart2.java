@@ -5,8 +5,8 @@ import java.util.Scanner;
 
 public class HomeworkPart2 {
 
-    public static void main(String[] args) {
-        HomeworkPart2 part2 = new HomeworkPart2();
+//    public static void main(String[] args) {
+//        HomeworkPart2 part2 = new HomeworkPart2();
 //        Scanner input = new Scanner(System.in);
 //        Scanner onOFF = new Scanner(System.in);
 //
@@ -82,13 +82,13 @@ public class HomeworkPart2 {
 //
 //        System.out.println("--------------------------finish ex 7 ----------------------\n\n");
 ////-------------------------------------------------------------------------------------------------------------------------------------------------------
-
-        List<String> list = new ArrayList<>();
-        int[] elementRandom = new int[3];
-        part2.displayLength(list, elementRandom);
-        System.out.println("--------------------------finish ex 8 ----------------------\n\n");
-//-------------------------------------------------------------------------------------------------------------------------------------------------------
-    }
+//
+//        List<String> list = new ArrayList<>();
+//        int[] elementRandom = new int[3];
+//        part2.displayLength(list, elementRandom);
+//        System.out.println("--------------------------finish ex 8 ----------------------\n\n");
+////-------------------------------------------------------------------------------------------------------------------------------------------------------
+//    }
 
     //exercise 1
     public void compareValues(int valuekeyboard) {
