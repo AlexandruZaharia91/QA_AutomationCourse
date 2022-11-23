@@ -5,7 +5,7 @@ public class BlackJack {
 
     public static void main(String[] args) {
         BlackJack game = new BlackJack();
-        System.out.println(game.firstTurn("ace", "ten", "six"));
+        System.out.println(game.firstTurn("ace", "two", "seven"));
     }
 
 
@@ -41,8 +41,7 @@ public class BlackJack {
     }
 
     public boolean isBlackJack(String card1, String card2) {
-        boolean isBlackJack = (parseCard(card1) + parseCard(card2)) == 21;
-        return isBlackJack;
+        return (parseCard(card1) + parseCard(card2)) == 21;
     }
 
 
@@ -55,14 +54,14 @@ public class BlackJack {
     }
 
     public String smallHand(int handscore, int dealerScore) {
-        String value = " ";
+        String value;
         if (handscore >= 17) {
             value = "S";
         } else if (handscore <= 11) {
             value = "H";
-        } else if ((handscore >= 12 && handscore <= 16) && (dealerScore < 7)) {
+        } else if (dealerScore < 7) {
             value = "S";
-        } else if ((handscore >= 12 && handscore <= 16) && (dealerScore >= 7)) {
+        } else {
             value = "H";
         }
         return value;
