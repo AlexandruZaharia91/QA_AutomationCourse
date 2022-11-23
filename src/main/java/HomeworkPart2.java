@@ -7,81 +7,80 @@ public class HomeworkPart2 {
 
     public static void main(String[] args) {
         HomeworkPart2 part2 = new HomeworkPart2();
-//        Scanner input = new Scanner(System.in);
-//        Scanner onOFF = new Scanner(System.in);
-//
-//
-//        System.out.print("Please add a number from keyboard: ");
-//        int valueKeyboard = input.nextInt();
-//        part2.compareValues(valueKeyboard);
-//        System.out.println("--------------------------finish ex 1 ----------------------\n\n");
-//
-////----------------------------------------------------------------------------------------------------------------------------------------------------
-//
-//        char typeOfOperation;
-//        char onOff = 'o';
-//        int number1;
-//        int number2;
-//
-//        while(onOff == 'o') {
-//            System.out.print("Choose a type of operation from this list: a - sum; s- decrease; i - multiplication; p - divide; m- module ---> " + "You chose:  ");
-//            typeOfOperation = input.next().charAt(0);
-//            System.out.println("-------------------------");
-//
-//            System.out.print("Choose the first number:  ");
-//            number1 = input.nextInt();
-//            System.out.println("-------------------------");
-//
-//            System.out.print("Choose the second number:  ");
-//            number2 = input.nextInt();
-//            System.out.println("-------------------------");
-//
-//            part2.calculator(typeOfOperation, number1, number2);
-//
-//            System.out.print("Press any literal task to continue , except for closing with the c key:   ");
-//            onOff = onOFF.next().charAt(0);
-//            if(onOff != 'c') {
-//                onOff = 'o';
-//            }
-//            else {
-//                System.out.println("Calculator is stopped");
-//            }
-//        }
-//        System.out.println("--------------------------finish ex 2 ----------------------\n\n");
-//
-////----------------------------------------------------------------------------------------------------------------------------------------------------
-//
-//        part2.arrayTwo(3,5);
-//        System.out.println("--------------------------finish ex 3 ----------------------\n\n");
-//
-////----------------------------------------------------------------------------------------------------------------------------------------------------
-//
-//        part2.arrayChar("AnaArePere");
-//        System.out.println("--------------------------finish ex 4 ----------------------\n\n");
-//
-////----------------------------------------------------------------------------------------------------------------------------------------------------
-//
-//        double[] arrayDouble = new double[]{1, 3, 7, 10, 21, 11, 4.5, 22, 10, 11, 45, 21, 22};
-//        part2.arrayDouble(arrayDouble);
-//        System.out.println("--------------------------finish ex 5 ----------------------\n\n");
-//
-////----------------------------------------------------------------------------------------------------------------------------------------------------
-//
-//        String[] elements = {"Ana", "Popescu", "Mircea", "George", "Iulia", "Ion", "Pavel", "Mircea", "Larisa"};
-//        part2.arrayRandom(elements);
-//        System.out.println("--------------------------finish ex 6 ----------------------\n\n");
-//
-////----------------------------------------------------------------------------------------------------------------------------------------------------
-//
-//
-//        List<Integer> elementsOfList = new ArrayList<>();
-//        for(int j = 0;j<5;j++) {
-//              elementsOfList.add(j);
-//        }
-//        part2.listOfElements(elementsOfList);
-//
-//        System.out.println("--------------------------finish ex 7 ----------------------\n\n");
-////-------------------------------------------------------------------------------------------------------------------------------------------------------
+        Scanner input = new Scanner(System.in);
+        Scanner onOFF = new Scanner(System.in);
+
+
+        System.out.print("Please add a number from keyboard: ");
+        int valueKeyboard = input.nextInt();
+        part2.compareValues(valueKeyboard);
+        System.out.println("--------------------------finish ex 1 ----------------------\n\n");
+
+//----------------------------------------------------------------------------------------------------------------------------------------------------
+
+        char typeOfOperation;
+        char onOff = 'o';
+        int number1;
+        int number2;
+
+        while (onOff == 'o') {
+            System.out.print("Choose a type of operation from this list: a - sum; s- decrease; i - multiplication; p - divide; m- module ---> " + "You chose:  ");
+            typeOfOperation = input.next().charAt(0);
+            System.out.println("-------------------------");
+
+            System.out.print("Choose the first number:  ");
+            number1 = input.nextInt();
+            System.out.println("-------------------------");
+
+            System.out.print("Choose the second number:  ");
+            number2 = input.nextInt();
+            System.out.println("-------------------------");
+
+            part2.calculator(typeOfOperation, number1, number2);
+
+            System.out.print("Press any literal task to continue , except for closing with the c key:   ");
+            onOff = onOFF.next().charAt(0);
+            if (onOff != 'c') {
+                onOff = 'o';
+            } else {
+                System.out.println("Calculator is stopped");
+            }
+        }
+        System.out.println("--------------------------finish ex 2 ----------------------\n\n");
+
+//----------------------------------------------------------------------------------------------------------------------------------------------------
+
+        part2.arrayTwo(3, 5);
+        System.out.println("--------------------------finish ex 3 ----------------------\n\n");
+
+//----------------------------------------------------------------------------------------------------------------------------------------------------
+
+        part2.arrayChar("AnaArePere");
+        System.out.println("--------------------------finish ex 4 ----------------------\n\n");
+
+//----------------------------------------------------------------------------------------------------------------------------------------------------
+
+        double[] arrayDouble = new double[]{1, 3, 7, 10, 21, 11, 4.5, 22, 10, 11, 45, 21, 22};
+        part2.arrayDouble(arrayDouble);
+        System.out.println("--------------------------finish ex 5 ----------------------\n\n");
+
+//----------------------------------------------------------------------------------------------------------------------------------------------------
+
+        String[] elements = {"Ana", "Popescu", "Mircea", "George", "Iulia", "Ion", "Pavel", "Mircea", "Larisa"};
+        part2.arrayRandom(elements);
+        System.out.println("--------------------------finish ex 6 ----------------------\n\n");
+
+//----------------------------------------------------------------------------------------------------------------------------------------------------
+
+
+        List<Integer> elementsOfList = new ArrayList<>();
+        for (int j = 0; j < 5; j++) {
+            elementsOfList.add(j);
+        }
+        part2.listOfElements(elementsOfList);
+
+        System.out.println("--------------------------finish ex 7 ----------------------\n\n");
+//-------------------------------------------------------------------------------------------------------------------------------------------------------
 
         List<String> list = new ArrayList<>();
         int[] elementRandom = new int[3];
@@ -95,10 +94,10 @@ public class HomeworkPart2 {
         Random random = new Random();
         int randomNumber = random.nextInt(100);
 
-        if(valuekeyboard < randomNumber) {
-            System.out.println("Numarul introdus este mai mic decat "+randomNumber+"");
-        } else if(valuekeyboard > randomNumber) {
-            System.out.println("Numarul introdus este mai mare decat "+randomNumber+"");
+        if (valuekeyboard < randomNumber) {
+            System.out.println("Numarul introdus este mai mic decat " + randomNumber + "");
+        } else if (valuekeyboard > randomNumber) {
+            System.out.println("Numarul introdus este mai mare decat " + randomNumber + "");
         }
         else {
             System.out.println("Numarul introdus este egal cu "+randomNumber+"");
@@ -189,13 +188,12 @@ public class HomeworkPart2 {
     //exercise 6
     public void arrayRandom(String[] array) {
         for(int i = 0; i<array.length;i++) {
-            if(i == 2) {
-                continue;
-            } else if(i == 7) {
+            if (i == 7) {
                 break;
-            }else {
-                System.out.println("Index valid: " + array[i]);
+            } else {
+                System.out.println("Index valid");
             }
+
         }
     }
 
