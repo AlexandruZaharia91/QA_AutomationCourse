@@ -15,12 +15,12 @@ public class AnnalynInfiltration {
     }
 
     public static void main(String[] args) {
-        AnnalynInfiltration infiltration = new AnnalynInfiltration(false, false,true,true);
+        AnnalynInfiltration infiltration = new AnnalynInfiltration(false, true, false, false);
         System.out.println("prisoner can be free: " + infiltration.canFreePrisoner());
     }
 
     public boolean canFastAttack() {
-        return knightIsAwake ? false : true;
+        return !knightIsAwake;
     }
 
     public boolean canSpy() {
@@ -32,14 +32,7 @@ public class AnnalynInfiltration {
     }
 
     public boolean canFreePrisoner() {
-        boolean prisonerFree = false;
-
-        if (canFastAttack() == false && canSpy() == true && canSignalPrisoner() == true && petDogIsPresent == false) {
-
-        } else if (canFastAttack() == false && canSpy() == true && canSignalPrisoner() == true && petDogIsPresent == true) {
-            prisonerFree = true;
-        }
-        return prisonerFree;
+        return (prisonerIsAwake && knightIsAwake && archerIsAwake) || (!archerIsAwake && petDogIsPresent);
     }
 
 }
