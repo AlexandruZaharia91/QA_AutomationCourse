@@ -188,13 +188,12 @@ public class HomeworkPart2 {
     //exercise 6
     public void arrayRandom(String[] array) {
         for(int i = 0; i<array.length;i++) {
-            if (i != 2) {
-                if (i == 7) {
-                    break;
-                } else {
-                    System.out.println("Index valid: " + array[i]);
-                }
+            if (i == 7) {
+                break;
+            } else {
+                System.out.println("Index valid");
             }
+
         }
     }
 
