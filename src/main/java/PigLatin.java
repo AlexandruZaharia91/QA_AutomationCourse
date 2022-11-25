@@ -1,75 +1,88 @@
 public class PigLatin {
     final char[] vowel = {'a', 'e', 'i', 'o', 'u', 'ă', 'î'};
-    boolean checkWord = false;
+    String[] newWord = new String[1];
+    String vowelToString = new String(vowel);
+    char[] newValue;
 
 
     public static void main(String[] args) {
         PigLatin start = new PigLatin();
-        System.out.println("new word is: " + start.checkWord("chair"));
+        start.checkWord("rhythm");
 
     }
 
-    public String checkWord(String word) {
-        String newWord = null;
-        if (vowel(word)) {
-            newWord = word + "ay";
-        } else if ((consonant(word).length() > 0)) {
-            newWord = consonant(word);
+    public void checkWord(String word) {
+        if (vowel(word) != null) {
+            System.out.println("new word is: " + vowel(word));
+        } else if (consonant(word) != null && vowelToString.contains("" + word.charAt(1) + "")) {
+            System.out.println("new word is: " + consonant(word));
+        } else if (consonantAndQu(word) != null) {
+            System.out.println("new word is: " + consonantAndQu(word));
+        } else if (consonantWithY(word) != null) {
+            System.out.println(consonantWithY(word));
         }
-
-        return newWord;
     }
 
 
-    public boolean vowel(String word) {
+    public String vowel(String word) {
         for (char elem : vowel) {
             if (word.charAt(0) == elem) {
-                checkWord = true;
+                newWord[0] = word + "ay";
                 break;
             }
         }
         if ((word.charAt(0) == 'x' && word.charAt(1) == 'r') || (word.charAt(0) == 'y' && word.charAt(1) == 't')) {
-            checkWord = true;
+            newWord[0] = word + "ay";
         }
-        return checkWord;
+        return newWord[0];
     }
 
 
     public String consonant(String word) {
-        String vowelToString = new String(vowel);
-
-        char[] newValue = new char[0];
         if (!(vowelToString.contains("" + word.charAt(0) + "")) && vowelToString.contains("" + word.charAt(1) + "")) {
             newValue = word.toCharArray();
             newValue[0] = ' ';
-            newValue[1] = ' ';
-        } else if (!(vowelToString.contains("" + word.charAt(0) + "") && vowelToString.contains("" + word.charAt(1) + ""))) {
+            newWord[0] = String.valueOf(newValue) + "" + word.charAt(0) + "" + "ay";
+        } else if (word.length() > 3 && !(vowelToString.contains("" + word.charAt(0) + "") && vowelToString.contains("" + word.charAt(1) + ""))
+                && !(word.charAt(2) == 'u')) {
             newValue = word.toCharArray();
             newValue[0] = ' ';
             newValue[1] = ' ';
+            newWord[0] = String.valueOf(newValue) + "" + word.charAt(0) + "" + "" + word.charAt(1) + "" + "ay";
         }
-        return new String(newValue) + "" + word.charAt(0) + "" + "" + word.charAt(1) + "" + "ay";
+        return newWord[0];
     }
 
-    public boolean consonantAndQu(String word) {
-        String vowelToString = new String(vowel);
-        if (!(vowelToString.contains("" + word.charAt(0) + "") && vowelToString.contains("" + word.charAt(1) + "")) && vowelToString.contains("" + word.charAt(2) + "")) {
-            checkWord = true;
+    public String consonantAndQu(String word) {
+        newValue = word.toCharArray();
+        if (word.length() > 3 && !(vowelToString.contains("" + word.charAt(0) + "") && vowelToString.contains("" + word.charAt(1) + ""))
+                && (word.charAt(2) == 'u')) {
+            newValue[0] = ' ';
+            newValue[1] = ' ';
+            newValue[2] = ' ';
+            newWord[0] = String.valueOf(newValue) + "" + word.charAt(0) + "" + "" + word.charAt(1) + "" + "" + word.charAt(2) + "" + "ay";
         }
-        return checkWord;
+        return newWord[0];
     }
 
-    public boolean consonantWithY(String word) {
-        String vowelToString = new String(vowel);
-        char[] changeWord = word.toCharArray();
-        for (int i = 0; i < changeWord.length; i++) {
-            if (changeWord[i] == 'y') {
+    public String consonantWithY(String word) {
+        newValue = word.toCharArray();
+        for (int i = 0; i < newValue.length; i++) {
+            if (newValue[i] == 'y') {
                 if (!(vowelToString.contains("" + word.charAt(i - 1) + "") && vowelToString.contains("" + word.charAt(i + 1) + ""))) {
-                    checkWord = true;
+                    newValue = word.toCharArray();
+                    newValue[0] = ' ';
+                    newValue[1] = ' ';
+                    newWord[0] = String.valueOf(newValue) + "" + word.charAt(0) + "" + "" + word.charAt(1) + "" + "ay";
+                } else if (!(vowelToString.contains("" + word.charAt(i - 2) + "") && vowelToString.contains("" + word.charAt(i - 1) + ""))) {
+                    newValue = word.toCharArray();
+                    newValue[0] = ' ';
+                    newValue[1] = ' ';
+                    newWord[0] = String.valueOf(newValue) + "" + word.charAt(0) + "" + "" + word.charAt(1) + "" + "ay";
                 }
             }
         }
-        return checkWord;
+        return newWord[0];
     }
 
 
