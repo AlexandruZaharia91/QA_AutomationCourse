@@ -7,7 +7,7 @@ public class PigLatin {
 
     public static void main(String[] args) {
         PigLatin start = new PigLatin();
-        start.checkWord("rhythm");
+        start.checkWord("string");
 
     }
 
