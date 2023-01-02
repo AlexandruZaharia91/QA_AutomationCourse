@@ -1,3 +1,5 @@
+package Homework;
+
 import java.util.ArrayList;
 import java.util.List;
 import java.util.Random;
@@ -98,8 +100,7 @@ public class HomeworkPart2 {
             System.out.println("Numarul introdus este mai mic decat " + randomNumber + "");
         } else if (valuekeyboard > randomNumber) {
             System.out.println("Numarul introdus este mai mare decat " + randomNumber + "");
-        }
-        else {
+        } else {
             System.out.println("Numarul introdus este egal cu "+randomNumber+"");
         }
     }
@@ -139,7 +140,7 @@ public class HomeworkPart2 {
         int[][] array = new int[lines][columns];
 
         for(int i = 0; i<lines; i++) {
-            for(int j = 0; j<columns;j++) {
+            for(int j = 0; j<columns; j++) {
                 array[i][j] = (i+j)*2;
             }
         }
@@ -148,14 +149,14 @@ public class HomeworkPart2 {
         System.out.println("the first element: " + array[0][0]);
         System.out.println("last element: " + array[2][4]);
     }
-    
+
     // exercise 4
     public void arrayChar(String arrayChar) {
         char[] values = new char[arrayChar.length()];
-        for(int j = 0; j<arrayChar.length();j++) {
+        for(int j = 0; j<arrayChar.length(); j++) {
             values[j] = arrayChar.charAt(j);
         }
-        for(int i = 0; i< values.length;i++) {
+        for(int i = 0; i< values.length; i++) {
             if(i % 2 == 0) {
                 System.out.println("se afiseaza pe ecran caracterul de pe pozitia para: " + values[i]);
             }
@@ -165,7 +166,7 @@ public class HomeworkPart2 {
         System.out.println("---------------------------------Varianta 2---------------------------------------------------------");
 
         char[] elements = arrayChar.toCharArray();
-        for(int i = 0; i<elements.length;i++) {
+        for(int i = 0; i<elements.length; i++) {
             if(i % 2 == 0) {
                 System.out.println("se afiseaza pe ecran caracterul de pe pozitia para: " + elements[i]);
             }
@@ -187,7 +188,7 @@ public class HomeworkPart2 {
 
     //exercise 6
     public void arrayRandom(String[] array) {
-        for(int i = 0; i<array.length;i++) {
+        for(int i = 0; i<array.length; i++) {
             if (i == 7) {
                 break;
             } else {
