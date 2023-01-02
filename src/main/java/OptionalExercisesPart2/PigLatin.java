@@ -1,3 +1,5 @@
+package OptionalExercisesPart2;
+
 public class PigLatin {
     final char[] vowel = {'a', 'e', 'i', 'o', 'u', 'ă', 'î'};
     String[] newWord = new String[1];

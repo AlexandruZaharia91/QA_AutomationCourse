@@ -17,6 +17,7 @@ public class DisplayRC {
             toy.driveToy();
             i--;
         }
+        toy.driveToy();
     }
 
     public String getBrand() {

@@ -1,7 +1,9 @@
+package Homework;
+
 import java.util.Scanner;
 
 public class HomeworkPart1 {
- //   int x,y,z = 10;
+    //   int x,y,z = 10;
     int year = 24;
     String sentence = "I like Java";
 
@@ -37,7 +39,6 @@ public class HomeworkPart1 {
         System.out.println("Varsta David: " + (year - 6));
         System.out.println("Varsta David: " + age);
     }
-
 
 
     //exercise 4
@@ -79,7 +80,6 @@ public class HomeworkPart1 {
         System.out.println("sum: " + sum + "; " + " value: " + value + "; " + "multiplication: " + multiplication + "; "
                 + "divide: " + divide + "; " + "modulo: " + modulo + "; " + "modula1: " + modulo1);
     }
-
 
 
     public void checkMethod() {
