@@ -5,6 +5,7 @@ public class AnnalynInfiltration {
     boolean archerIsAwake;
     boolean prisonerIsAwake;
     boolean petDogIsPresent;
+    boolean free = false;
 
 
     public AnnalynInfiltration(boolean knightIsAwake, boolean archerIsAwake, boolean prisonerIsAwake, boolean petDogIsPresent) {
@@ -15,8 +16,12 @@ public class AnnalynInfiltration {
     }
 
     public static void main(String[] args) {
-        AnnalynInfiltration infiltration = new AnnalynInfiltration(false, true, false, false);
+        AnnalynInfiltration infiltration = new AnnalynInfiltration(false, true, true, true);
+        System.out.println("fast attack: " + infiltration.canFastAttack());
+        System.out.println("spy: " + infiltration.canSpy());
+        System.out.println("signal prisoner: " + infiltration.canSignalPrisoner());
         System.out.println("prisoner can be free: " + infiltration.canFreePrisoner());
+
     }
 
     public boolean canFastAttack() {
@@ -28,11 +33,17 @@ public class AnnalynInfiltration {
     }
 
     public boolean canSignalPrisoner() {
-        return archerIsAwake || prisonerIsAwake;
+        return !(archerIsAwake) && prisonerIsAwake;
     }
 
     public boolean canFreePrisoner() {
-        return (prisonerIsAwake && knightIsAwake && archerIsAwake) || (!archerIsAwake && petDogIsPresent);
+
+        if (petDogIsPresent && knightIsAwake && !archerIsAwake) {
+            free = true;
+        } else if (prisonerIsAwake && !archerIsAwake) {
+            free = true;
+        }
+        return free;
     }
 
 }
