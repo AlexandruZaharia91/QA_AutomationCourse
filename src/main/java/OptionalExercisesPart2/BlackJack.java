@@ -5,7 +5,7 @@ public class BlackJack {
 
     public static void main(String[] args) {
         BlackJack game = new BlackJack();
-        System.out.println(game.firstTurn("ace", "two", "seven"));
+        System.out.println(game.firstTurn("six", "six", "eight"));
     }
 
 

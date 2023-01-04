@@ -18,7 +18,7 @@ public class BirdWatcher {
         System.out.println("number of birds for today: " + birds.getToday());
         System.out.println("number of birs before update: " + Arrays.toString(birds.birdsPerDay));
         birds.incrementTodaysCount();
-        System.out.println("  add a new bird for today: " + Arrays.toString(birds.birdsPerDay));
+        System.out.println("add a new bird for today: " + Arrays.toString(birds.birdsPerDay));
         System.out.println("days without birds: " + birds.hasDayWithoutBirds());
         System.out.println("number of birds for 4 days: " + birds.getCountForFirstDays(4));
         System.out.println("days with 5 or more than 5 birds per day: " + birds.getBusyDays());
