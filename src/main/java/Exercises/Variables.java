@@ -55,12 +55,5 @@ public class Variables {
         System.out.println("\n\n");
         System.out.println("Expresii multiple: " + this.reviste + "-----" + (this.carti + this.reviste) + "------" + this.check);
 
-        // Type Casting Java
-        double d = 1024.530;
-        long l = (long) d;
-        int i = (int) l;
-        System.out.println("inainte de comnversie: " + d);
-        System.out.println("dupa conversie cu long: " + l);
-        System.out.println("dupa conversie din long in int: " + i);
     }
 }

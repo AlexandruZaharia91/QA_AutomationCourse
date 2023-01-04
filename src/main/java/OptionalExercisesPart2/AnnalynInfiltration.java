@@ -1,44 +1,33 @@
 package OptionalExercisesPart2;
 
 public class AnnalynInfiltration {
-    boolean knightIsAwake;
-    boolean archerIsAwake;
-    boolean prisonerIsAwake;
-    boolean petDogIsPresent;
     boolean free = false;
 
 
-    public AnnalynInfiltration(boolean knightIsAwake, boolean archerIsAwake, boolean prisonerIsAwake, boolean petDogIsPresent) {
-        this.knightIsAwake = knightIsAwake;
-        this.archerIsAwake = archerIsAwake;
-        this.prisonerIsAwake = prisonerIsAwake;
-        this.petDogIsPresent = petDogIsPresent;
-    }
-
     public static void main(String[] args) {
-        AnnalynInfiltration infiltration = new AnnalynInfiltration(false, true, true, true);
-        System.out.println("fast attack: " + infiltration.canFastAttack());
-        System.out.println("spy: " + infiltration.canSpy());
-        System.out.println("signal prisoner: " + infiltration.canSignalPrisoner());
-        System.out.println("prisoner can be free: " + infiltration.canFreePrisoner());
+        AnnalynInfiltration infiltration = new AnnalynInfiltration();
+        System.out.println("fast attack: " + infiltration.canFastAttack(true));
+        System.out.println("spy: " + infiltration.canSpy(true, false, false));
+        System.out.println("signal prisoner: " + infiltration.canSignalPrisoner(false, false));
+        System.out.println("prisoner can be free: " + infiltration.canFreePrisoner(true, false, false, true));
 
     }
 
-    public boolean canFastAttack() {
+    public boolean canFastAttack(boolean knightIsAwake) {
         return !knightIsAwake;
     }
 
-    public boolean canSpy() {
+    public boolean canSpy(boolean knightIsAwake, boolean archerIsAwake, boolean prisonerIsAwake) {
         return knightIsAwake || archerIsAwake || prisonerIsAwake;
     }
 
-    public boolean canSignalPrisoner() {
+    public boolean canSignalPrisoner(boolean archerIsAwake, boolean prisonerIsAwake) {
         return !(archerIsAwake) && prisonerIsAwake;
     }
 
-    public boolean canFreePrisoner() {
+    public boolean canFreePrisoner(boolean knightIsAwake, boolean archerIsAwake, boolean prisonerIsAwake, boolean petDogIsPresent) {
 
-        if (petDogIsPresent && knightIsAwake && !archerIsAwake) {
+        if ((petDogIsPresent && knightIsAwake) && !archerIsAwake) {
             free = true;
         } else if (prisonerIsAwake && !archerIsAwake) {
             free = true;
